@@ -15,6 +15,7 @@ public class Pelicula {
     private String Director;
     private String actores;
     private int duración; //en minutos
+    private Sala salaasignada;
 
     public Pelicula(String nombre, String genero, String Año, String Director, String actores, int duración) {
         this.nombre = nombre;
@@ -28,4 +29,22 @@ public class Pelicula {
     public String getNombre() {
         return nombre;
     }
+    public Sala getSala(){
+        return salaasignada;
+    }
+    public void asignaSala(Sala sala){
+        this.salaasignada = sala;
+    }
+
+    @Override
+    public String toString() {
+        return  "Película: "+this.nombre + "\nGénero: " + this.genero
+                +"\n Año: " + this.Año
+                +"\nDirigida por " + this.Director
+                +"\nInterpretada por " + this.actores
+                +"\nDuración: "+ this.duración+"min";
+    }
+    
+    
+    
 }

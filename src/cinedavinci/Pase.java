@@ -16,7 +16,7 @@ public class Pase {
         this.fecha = fecha;
         this.numbutacas = numbutacas;
     }
-
+     
     public String getFecha() {
         return fecha;
     }

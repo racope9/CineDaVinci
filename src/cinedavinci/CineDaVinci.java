@@ -15,15 +15,14 @@ public class CineDaVinci {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        Scanner tc = new Scanner(System.in);
+    public static void main(String[] args) throws SalaSinPasesException {
         
         Cine DaVinci = new Cine("Da Vinci", "Albacete", "2024", 3);
-        Sala sala1 = new Sala(1, 40, 1);
-        Sala sala2 = new Sala(2, 40, 1);
-        Sala sala3 = new Sala(3, 40, 1);
-        Sala sala4 = new Sala(4, 40, 1);
-        Sala sala5 = new Sala(5, 40, 1);
+        Sala sala1 = new Sala(1,40, 1);
+        Sala sala2 = new Sala(2,40, 1);
+        Sala sala3 = new Sala(3,40, 1);
+        Sala sala4 = new Sala(4,40, 1);
+        Sala sala5 = new Sala(5,40, 1);
         DaVinci.añadesala(sala1);
         DaVinci.añadesala(sala2);
         DaVinci.añadesala(sala3);

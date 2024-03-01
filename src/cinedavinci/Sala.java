@@ -12,24 +12,34 @@ import java.util.ArrayList;
  */
 class Sala {
     private int numsala;
+    private int numbutacas;
     private int planta;
     private String horario;
     private Pelicula peli;
     private ArrayList<Pase> pases;
 
-    public Sala(int numsala, int numbutacas, int planta) {
+    public Sala(int numsala,int numbutacas, int planta) {
         this.numsala = numsala;
+        this.numbutacas=numbutacas;
         this.planta = planta;
         this.horario = "HORARIO";
         this.pases = new ArrayList<Pase>();
     }
     
     public void añadePeli(Pelicula peli){
-        this.peli=peli;
+        if(this.peli.getSala()!=null){
+            System.out.println("Esta película ya ha sido asignada a otra sala");
+        } else{
+            this.peli=peli;
+            this.peli.asignaSala(this);
+        }
     }
     public void añadePase(Pase pase){      //Al añadir un pase se añadirá una hora a la película que se transmite en la propia sala
-       this.pases.add(pase);              
-       this.horario = this.horario + "\n"+pase.getFecha();
+        if(pase.getNumbutacas() <this.numbutacas){
+            System.out.println("La sala no es lo suficientemente grande");
+        }
+        this.pases.add(pase);
+        this.horario = this.horario + "\n"+pase.getFecha();
     }
     
     public void vaciaSala(){
@@ -38,9 +48,13 @@ class Sala {
         this.horario = "HORARIO";
     }
     
-    public void verSala(){
-        System.out.println("\nSALA "+this.numsala + "\nPELÍCULA: " +this.peli.getNombre()
-                            +"\n"+this.horario);
+    public String verSala() throws SalaSinPasesException{
+        if(this.pases!=null){
+            return "Sala "+this.numsala + "\n" + this.peli.toString();
+            
+        } else {
+            throw new SalaSinPasesException("La sala no tiene pases");
+        }
         
     }
     
