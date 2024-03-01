@@ -41,6 +41,15 @@ public class CineDaVinci {
         sala4.añadePeli(Pepinillo);
         sala5.añadePeli(LVPM);
         
+        Peliculas listaPelis = new Peliculas();
+        listaPelis.agregaPeli(JJK);
+        listaPelis.agregaPeli(LVPM);
+        listaPelis.agregaPeli(BulletTrain);
+        listaPelis.agregaPeli(Pepinillo);
+        listaPelis.agregaPeli(viento);
+        
+        
+        
         Pase pase1 = new Pase("16:00", 40);
         
         sala1.añadePase(pase1);
@@ -49,9 +58,18 @@ public class CineDaVinci {
         sala4.añadePase(pase1);
         sala5.añadePase(pase1);
         
-        sala1.verSala();
+        sala1.toString();
         
-        sala1.sacarEntrada(pase1, 3);
+        Archivo CineDaVinci = new Archivo("/Archivos_Java/Archivo_Cine.dat");
+        ArchivoPelis listadePelisAr = new ArchivoPelis("/Archivos_Java/Archivo_Lista.txt");
+        
+        CineDaVinci.crearArchivoCine(DaVinci);
+        CineDaVinci.visualizarArchivoCine();
+        
+        listadePelisAr.crearArchivoPeli(listaPelis);
+        listadePelisAr.visualizarArchivoPelis();
+       
+        
     }
     
 }
