@@ -4,13 +4,16 @@
  */
 package cinedavinci;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Racope
  */
-class Sala {
+class Sala implements Serializable {
     private int numsala;
     private int numbutacas;
     private int planta;
@@ -32,12 +35,8 @@ class Sala {
     
     
     public void añadePeli(Pelicula peli){
-        if(this.peli.getSala()!=null){
-            System.out.println("Esta película ya ha sido asignada a otra sala");
-        } else{
             this.peli=peli;
             this.peli.asignaSala(this);
-        }
     }
     public void añadePase(Pase pase){      //Al añadir un pase se añadirá una hora a la película que se transmite en la propia sala
         if(pase.getNumbutacas() <this.numbutacas){
@@ -53,13 +52,17 @@ class Sala {
         this.horario = "HORARIO";
     }
     
-    public String verSala() throws SalaSinPasesException{
+    @Override
+    public String toString() {
         if(this.pases!=null){
             return this.peli.toString();
         } else {
-            throw new SalaSinPasesException("La sala no tiene pases");
+            try {
+                throw new SalaSinPasesException("La sala no tiene pases");
+            } catch (SalaSinPasesException ex) {
+                return ex.getMessage();
+            }
         }
-        
     }
     
     public void sacarEntrada(Pase pase, int num){

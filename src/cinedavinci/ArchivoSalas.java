@@ -8,16 +8,6 @@ package cinedavinci;
  *
  * @author Racope
  */
-public class SalaSinPasesException extends Exception {
-
+public class ArchivoSalas {
     
-    public SalaSinPasesException(String msg) {
-        super(msg);
-    }
-    
-    @Override
-    public String getMessage() {
-        return super.getMessage();
-    }
-
 }

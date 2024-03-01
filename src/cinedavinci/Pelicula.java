@@ -4,11 +4,13 @@
  */
 package cinedavinci;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Racope
  */
-public class Pelicula {
+public class Pelicula implements Serializable {
     private String nombre;
     private String genero;
     private String Año;

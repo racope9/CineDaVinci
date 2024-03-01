@@ -4,11 +4,13 @@
  */
 package cinedavinci;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Racope
  */
-public class Pase {
+public class Pase implements Serializable{
     private String fecha;
     private int numbutacas;
 
