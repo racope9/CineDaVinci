@@ -4,13 +4,14 @@
  */
 package cinedavinci;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Racope
  */
-public class Cine {
+public class Cine implements Serializable {
     private String Nombre;
     private String Ciudad;
     private String Año;
@@ -28,4 +29,14 @@ public class Cine {
     public void añadesala(Sala sala){
         this.salas.add(sala);
     }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + this.Nombre
+                +"\nCiudad: " + this.Ciudad
+                +"\nAño: " + this.Año
+                +"\nPlantas: "+this.NumPlantas; 
+    }
+    
+    
 }
