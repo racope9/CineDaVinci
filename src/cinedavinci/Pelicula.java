@@ -38,11 +38,13 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return  "Película: "+this.nombre + "\nGénero: " + this.genero
-                +"\n Año: " + this.Año
-                +"\nDirigida por " + this.Director
-                +"\nInterpretada por " + this.actores
-                +"\nDuración: "+ this.duración+"min";
+        return  "Sala "+this.salaasignada.getNumsala() 
+                +"\n"+"Película: "+this.nombre 
+                +"\nGénero: "+this.genero
+                +"\n Año: "+this.Año
+                +"\nDirigida por "+this.Director
+                +"\nInterpretada por "+this.actores
+                +"\nDuración: "+this.duración+"min";
     }
     
     

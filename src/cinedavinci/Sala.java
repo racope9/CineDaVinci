@@ -25,6 +25,11 @@ class Sala {
         this.horario = "HORARIO";
         this.pases = new ArrayList<Pase>();
     }
+
+    public int getNumsala() {
+        return numsala;
+    }
+    
     
     public void añadePeli(Pelicula peli){
         if(this.peli.getSala()!=null){
@@ -50,8 +55,7 @@ class Sala {
     
     public String verSala() throws SalaSinPasesException{
         if(this.pases!=null){
-            return "Sala "+this.numsala + "\n" + this.peli.toString();
-            
+            return this.peli.toString();
         } else {
             throw new SalaSinPasesException("La sala no tiene pases");
         }
