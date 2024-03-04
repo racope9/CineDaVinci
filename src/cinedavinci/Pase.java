@@ -35,5 +35,5 @@ public class Pase implements Serializable{
             System.out.println("No hay asientos suficientes para este pase");
         }
     }
-   
+    
 }
