@@ -40,8 +40,8 @@ public class Pelicula implements Serializable {
 
     @Override
     public String toString() {
-        return  "Sala "+this.salaasignada.getNumsala() 
-                +"\n"+"Película: "+this.nombre 
+        return  "\nSala "+this.salaasignada.getNumsala() 
+                +"\nPelícula: "+this.nombre 
                 +"\nGénero: "+this.genero
                 +"\n Año: "+this.Año
                 +"\nDirigida por "+this.Director

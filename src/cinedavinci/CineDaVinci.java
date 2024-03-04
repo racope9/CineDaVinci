@@ -60,7 +60,7 @@ public class CineDaVinci {
         
         sala1.toString();
         
-        Archivo CineDaVinci = new Archivo("/Archivos_Java/Archivo_Cine.dat");
+        ArchivoCine CineDaVinci = new ArchivoCine("/Archivos_Java/Archivo_Cine.dat");
         ArchivoPelis listadePelisAr = new ArchivoPelis("/Archivos_Java/Archivo_Lista.txt");
         
         CineDaVinci.crearArchivoCine(DaVinci);

@@ -19,10 +19,10 @@ import java.util.logging.Logger;
  *
  * @author Racope
  */
-public class Archivo { 
+public class ArchivoCine { 
     private String archivo;
     
-    public Archivo(String archivo){
+    public ArchivoCine(String archivo){
         this.archivo = archivo;
     }
     

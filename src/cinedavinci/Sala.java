@@ -19,7 +19,7 @@ class Sala implements Serializable {
     private int planta;
     private String horario;
     private Pelicula peli;
-    private ArrayList<Pase> pases;
+    ArrayList<Pase> pases;
 
     public Sala(int numsala,int numbutacas, int planta) {
         this.numsala = numsala;
