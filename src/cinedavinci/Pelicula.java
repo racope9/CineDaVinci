@@ -46,7 +46,7 @@ public class Pelicula implements Serializable {
                 +"\n Año: "+this.Año
                 +"\nDirigida por "+this.Director
                 +"\nInterpretada por "+this.actores
-                +"\nDuración: "+this.duración+"min";
+                +"\nDuración: "+this.duración+"min" + "\n";
     }
     
     

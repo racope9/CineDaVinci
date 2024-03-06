@@ -68,7 +68,24 @@ public class CineDaVinci {
         
         listadePelisAr.crearArchivoPeli(listaPelis);
         listadePelisAr.visualizarArchivoPelis();
-       
+        
+        System.out.println("\n");
+        
+        Salas listaSalas = new Salas();
+        listaSalas.agregaSala(sala1);
+        listaSalas.agregaSala(sala2);
+        
+        ArchivoSalas SalasAR = new ArchivoSalas("/Archivos_Java/pases_peliculas.dt");
+        SalasAR.crearArchivoSala(listaSalas);
+        
+        SalasAR.visualizarArchivoSala();
+        
+        ArchivoSalas SalasARTXT = new ArchivoSalas("/Archivos_Java/pases_peliculas.txt");
+        SalasARTXT.crearArchivoSala(listaSalas);
+        
+        SalasARTXT.visualizarArchivoSala();
+        
+        
         
     }
     

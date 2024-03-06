@@ -55,7 +55,11 @@ class Sala implements Serializable {
     @Override
     public String toString() {
         if(this.pases!=null){
-            return this.peli.toString();
+            return "Sala "+this.numsala
+                    +"\nButacas: "+this.numbutacas
+                    +"\nPlanta: "+this.planta
+                    +"\nPases: " +this.horario
+                    +"\nPeli: "+this.peli + "\n";
         } else {
             try {
                 throw new SalaSinPasesException("La sala no tiene pases");
